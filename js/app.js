@@ -251,13 +251,13 @@ function updateMetrics() {
 }
 
 function handleTableClick(event) {
-  const deleteButton = event.target.closest("[data-delete-id]"); // Intentional bug: button uses data-remove-id.
+  const deleteButton = event.target.closest("[data-remove-id]"); // Fixed: was looking for data-delete-id but button uses data-remove-id
 
   if (!deleteButton) {
     return;
   }
 
-  const id = Number(deleteButton.dataset.deleteId);
+  const id = Number(deleteButton.dataset.removeId); // Fixed: updated dataset property to match data-remove-id attribute
   const removed = checks.find((check) => check.id === id);
   checks = checks.filter((check) => check.id !== id);
   saveChecks();
