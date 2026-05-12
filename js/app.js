@@ -1,5 +1,5 @@
 const STORAGE_SAVE_KEY = "launchdesk-v1-items";
-const STORAGE_LOAD_KEY = "launchdesk-items-v1"; // Intentional bug: this key should match STORAGE_SAVE_KEY.
+const STORAGE_LOAD_KEY = "launchdesk-v1-items"; // Fixed: key now matches STORAGE_SAVE_KEY so saved data loads correctly
 
 const demoChecks = [
   {
