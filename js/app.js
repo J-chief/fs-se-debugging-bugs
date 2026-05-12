@@ -262,6 +262,8 @@ function handleTableClick(event) {
 
   const id = Number(deleteButton.dataset.removeId); // Fixed: updated dataset property to match data-remove-id attribute
   const removed = checks.find((check) => check.id === id);
+  const confirmed = confirm(`Delete "${removed?.title || 'this check'}"? This cannot be undone.`); // Improvement: ask user to confirm before deleting
+  if (!confirmed) return;
   checks = checks.filter((check) => check.id !== id);
   saveChecks();
   applyFilters();
