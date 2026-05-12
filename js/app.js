@@ -91,7 +91,7 @@ const activityLog = document.getElementById("activityLog");
 let checks = loadChecks();
 let currentView = checks;
 
-form.addEventListener("submit", (event) => handleAddChek(event)); // Intentional bug: misspelled function name.
+form.addEventListener("submit", (event) => handleAddCheck(event)); // Fixed: corrected misspelled function name from handleAddChek
 searchInput.addEventListener("input", applyFilters);
 statusFilter.addEventListener("change", applyFilters);
 priorityFilter.addEventListener("change", applyFilters);
