@@ -235,7 +235,7 @@ function renderRows(list) {
 
 function updateMetrics() {
   const total = checks.length;
-  const fixed = checks.filter((check) => check.status === "Complete").length; // Intentional bug: valid fixed status is "Fixed".
+  const fixed = checks.filter((check) => check.status === "Fixed").length; // Fixed: was checking for "Complete" which is not a valid status value
   const criticalOpen = checks.filter(
     (check) => check.priority === "Critical" && check.status !== "Fixed",
   ).length;
