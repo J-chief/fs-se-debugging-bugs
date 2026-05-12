@@ -209,7 +209,7 @@ function renderRows(list) {
         <td><span class="priority-pill ${priorityClass}">${escapeHtml(check.priority)}</span></td>
         <td><span class="status-badge ${statusClass}">${escapeHtml(check.status)}</span></td>
         <td>${escapeHtml(check.owner)}</td>
-        <td>${formatDate(check.dueDate)}</td>
+        <td class="${daysUntil(check.dueDate) < 0 ? 'overdue' : daysUntil(check.dueDate) <= 3 ? 'due-soon' : ''}">${formatDate(check.dueDate)}</td>
         <td>
           <span class="row-actions">
             <select data-status-id="${check.id}" aria-label="Update status for ${escapeHtml(check.title)}">

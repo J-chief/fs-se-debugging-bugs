@@ -560,3 +560,14 @@ tbody tr:last-child td {
     font-size: 16px;
   }
 }
+
+/* Improvement: overdue and due-soon date highlighting */
+.overdue {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.due-soon {
+  color: #d97706;
+  font-weight: bold;
+}
